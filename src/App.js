@@ -1,6 +1,7 @@
 import React from 'react';
 import {Navbar,NavbarBrand} from 'reactstrap'
 import Menu from './components/MenuComponent'
+import {DISHES} from './shared/dishes'
 import './App.css';
 
 function App() {
@@ -9,10 +10,9 @@ function App() {
       <Navbar dark color="primary">
         <div className="container">
           <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
-
         </div>
       </Navbar>
-      <Menu/>
+      <Menu dishes={DISHES}/>
     </div>
   );
 }
