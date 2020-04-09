@@ -12,7 +12,7 @@ class Main extends React.Component {
       selectedDish: null
     };
   }
-  onDishSelect(dishId){
+  select=(dishId)=>{
       this.setState({selectedDish:dishId});
       
   }
@@ -24,7 +24,7 @@ class Main extends React.Component {
             <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
           </div>
         </Navbar>
-        <Menu dishes={this.state.dishes} onClick={(dishId) => this.onDishSelect(dishId)} />
+        <Menu dishes={this.state.dishes} onClick={this.select} />
         <DishDetail dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0]} />
       </div>
     );
