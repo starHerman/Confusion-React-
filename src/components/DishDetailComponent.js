@@ -16,7 +16,7 @@ import {Card,CardBody,CardTitle,CardImg,CardText} from 'reactstrap'
                 <h4>{dish.name}</h4>
               </CardTitle>
               <CardText>
-                <h6>{dish.description}</h6>
+                <strong>{dish.description}</strong>
               </CardText>
             </CardBody>
           </Card>
@@ -33,21 +33,21 @@ import {Card,CardBody,CardTitle,CardImg,CardText} from 'reactstrap'
         else{
             const c=dish.comments.map((comment)=>{
                 return (
-                  <React.Fragment>
-                    <li key={comment.id}>
-                      <div>{comment.comment}</div>
-                      <br />
-                      <div>
-                        -- {comment.author} ,{" "}
-                        {new Intl.DateTimeFormat("en-US", {
-                          year: "numeric",
-                          month: "short",
-                          day: "2-digit",
-                        }).format(new Date(Date.parse(comment.date)))}
-                      </div>
-                      <br />
-                    </li>
-                  </React.Fragment>
+                  <li key={comment.id}>
+                    <div>
+                      <strong>{comment.comment}</strong>
+                    </div>
+                    <br />
+                    <div>
+                      -- {comment.author} ,{" "}
+                      {new Intl.DateTimeFormat("en-US", {
+                        year: "numeric",
+                        month: "short",
+                        day: "2-digit",
+                      }).format(new Date(Date.parse(comment.date)))}
+                    </div>
+                    <br />
+                  </li>
                 );
             })
             return (
