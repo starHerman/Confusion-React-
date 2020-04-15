@@ -28,7 +28,7 @@ class Header extends React.Component{
                     src="assets/images/logo.png"
                     height="30"
                     width="41"
-                    alt="Ristorante Con Fusion"
+                    alt=""
                   />
                 </NavbarBrand>
                 <Collapse isOpen={this.state.isOpen} navbar>
