@@ -1,5 +1,6 @@
 import React from 'react'
-import { Navbar, NavbarBrand ,NavItem,NavLink,Jumbotron,Nav,NavbarToggler,Collapse} from "reactstrap"
+import { Navbar, NavbarBrand ,NavItem,Jumbotron,Nav,NavbarToggler,Collapse} from "reactstrap"
+import {NavLink} from 'react-router-dom'
 class Header extends React.Component{
 
     constructor(props){
@@ -7,6 +8,7 @@ class Header extends React.Component{
       this.state={
         isOpen:false
       }
+      this.toggleNav = this.toggleNav.bind(this);
 
     }
     toggleNav=()=>{
