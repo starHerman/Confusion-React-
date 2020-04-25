@@ -34,7 +34,7 @@ class Header extends React.Component{
            " Password: " +
            this.password.value +
            " Remember: " +
-           this.r.checked
+           this.remember.checked
        );
        event.preventDefault();
 
@@ -131,7 +131,7 @@ class Header extends React.Component{
                         type="checkbox"
                         id="remember"
                         name="remember"
-                        innerRef={(input) => (this.r= input)}
+                        innerRef={(input) => (this.remember= input)}
                       ></Input>
                       Remember me
                     </Label>
